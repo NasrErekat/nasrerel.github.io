@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>موقعي الشخصي</title>
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
     body {
       margin: 0;
@@ -41,10 +45,11 @@
     .links a {
       display: inline-block;
       margin: 0 12px;
-      padding-bottom: 4px;
+      padding-bottom: 6px;
       color: #f3c77a;
       text-decoration: none;
       position: relative;
+      transition: color 0.3s ease;
     }
 
     .links a::after {
@@ -52,7 +57,7 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      width: 0%;
+      width: 0;
       height: 1px;
       background: #f3c77a;
       transition: width 0.3s ease;
@@ -65,8 +70,11 @@
     .links a:hover {
       color: #ffd28a;
     }
+
+    .links i {
+      margin-right: 6px;
+    }
   </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -75,21 +83,19 @@
     <h1>مرحبًا، أنا نصر</h1>
 
     <p>
-      هذا موقعي الشخصي.<br>
-      مساحة هادئة تعكس أفكاري واهتمامي.
+      هنا موقعي الشخصي.<br>
+      مساحة هادئة تعكس أفكاري واهتماماتي.
     </p>
 
-   <div class="links">
-  <a href="https://instagram.com" target="_blank">
-    <i class="fab fa-instagram"></i>
-    Instagram
-  </a>
+    <div class="links">
+      <a href="https://instagram.com" target="_blank">
+        <i class="fab fa-instagram"></i>Instagram
+      </a>
 
-  <a href="https://tiktok.com" target="_blank">
-    <i class="fab fa-tiktok"></i>
-    TikTok
-  </a>
-</div> 
+      <a href="https://tiktok.com" target="_blank">
+        <i class="fab fa-tiktok"></i>TikTok
+      </a>
+    </div>
   </div>
 
 </body>
