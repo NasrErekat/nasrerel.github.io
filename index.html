@@ -3,98 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>sigma</title>
+<title>THE SIGMA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap');
-
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Cairo', sans-serif;
 }
 
 body {
-  margin: 0;
   min-height: 100vh;
-  background: radial-gradient(circle at top, #1a1a1a, #000);
+  background: radial-gradient(circle at top, #222 0%, #000 70%);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #e6e6e6;
+  color: #eee;
+  overflow: hidden;
+}
+
+/* حركة دخول */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .card {
-  width: 320px;
+  width: 92%;
+  max-width: 420px;
   background: rgba(20,20,20,0.9);
   border-radius: 22px;
-  padding: 28px 22px 26px;
+  padding: 32px 24px;
   text-align: center;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
-  backdrop-filter: blur(8px);
+  box-shadow: 0 0 60px rgba(255,215,100,0.08);
+  animation: fadeUp 1.2s ease forwards;
 }
 
+/* الصورة */
 .avatar {
-  width: 110px;
-  height: 110px;
+  width: 130px;
+  height: 130px;
   margin: 0 auto 18px;
   border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 0 30px rgba(212,175,55,0.35);
+  background-image: url("avatar.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 30px rgba(255,215,100,0.25);
+  animation: fadeUp 1s ease forwards;
 }
 
-.avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+/* الاسم */
 h1 {
-  margin: 0;
-  font-size: 26px;
-  color: #d4af37;
-  letter-spacing: 1px;
+  color: #d4b16a;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 6px;
 }
 
+/* العنوان */
 .subtitle {
-  margin-top: 6px;
-  font-size: 15px;
-  color: #aaa;
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 18px;
 }
 
+/* النص */
 .text {
-  margin-top: 18px;
   font-size: 15px;
   line-height: 1.9;
-  color: #ddd;
+  margin-bottom: 26px;
+  opacity: 0.9;
 }
 
+/* الأزرار */
 .buttons {
   display: flex;
   gap: 14px;
-  margin-top: 24px;
+  justify-content: center;
+  margin-bottom: 18px;
 }
 
 .buttons a {
   flex: 1;
-  text-decoration: none;
   padding: 12px 0;
   border-radius: 14px;
-  font-size: 14px;
-  color: #d4af37;
-  border: 1px solid rgba(212,175,55,0.4);
-  background: rgba(255,255,255,0.02);
+  text-decoration: none;
+  color: #d4b16a;
+  border: 1px solid rgba(212,177,106,0.45);
   transition: 0.3s;
 }
 
 .buttons a:hover {
-  background: rgba(212,175,55,0.15);
-  transform: translateY(-2px);
+  background: rgba(212,177,106,0.12);
 }
 
+/* الفوتر */
 footer {
-  margin-top: 22px;
   font-size: 12px;
-  color: #777;
+  opacity: 0.45;
 }
 </style>
 </head>
@@ -103,11 +118,9 @@ footer {
 
 <div class="card">
 
-  <div class="avatar">
-    <img src="avatar.png" alt="sigma">
-  </div>
+  <div class="avatar"></div>
 
-  <h1>sigma</h1>
+  <h1>THE SIGMA</h1>
   <div class="subtitle">مساحة صامتة</div>
 
   <div class="text">
@@ -117,8 +130,8 @@ footer {
   </div>
 
   <div class="buttons">
-    <a href="https://www.instagram.com/sigma.n.s" target="_blank">Instagram</a>
     <a href="https://www.tiktok.com/@nasrerekat" target="_blank">TikTok</a>
+    <a href="https://www.instagram.com/sigma.n.s" target="_blank">Instagram</a>
   </div>
 
   <footer>© sigma — 2026</footer>
