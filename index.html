@@ -5,95 +5,96 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>sigma</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
-
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Cairo', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
 }
 
-body{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-background:
-radial-gradient(circle at top, #1c1c1c, #050505 70%);
-color:#e6e6e6;
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e6e6e6;
 }
 
-.card{
-width:320px;
-padding:32px 24px;
-background:rgba(20,20,20,0.75);
-border-radius:22px;
-box-shadow:0 25px 60px rgba(0,0,0,0.6);
-text-align:center;
-backdrop-filter: blur(10px);
+.card {
+  width: 320px;
+  background: rgba(20,20,20,0.9);
+  border-radius: 22px;
+  padding: 28px 22px 26px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+  backdrop-filter: blur(8px);
 }
 
-.avatar{
-width:120px;
-height:120px;
-margin:0 auto 18px;
-border-radius:50%;
-background:url("avatar.png") center/cover no-repeat;
-box-shadow:
-0 0 0 6px rgba(255,255,255,0.03),
-0 0 25px rgba(200,170,90,0.25);
+.avatar {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(212,175,55,0.35);
 }
 
-h1{
-font-size:26px;
-font-weight:600;
-color:#d4b26a;
-letter-spacing:1px;
-margin-bottom:8px;
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.subtitle{
-font-size:14px;
-color:#9c9c9c;
-margin-bottom:18px;
+h1 {
+  margin: 0;
+  font-size: 26px;
+  color: #d4af37;
+  letter-spacing: 1px;
 }
 
-.text{
-font-size:16px;
-line-height:1.9;
-color:#e0e0e0;
-margin-bottom:26px;
+.subtitle {
+  margin-top: 6px;
+  font-size: 15px;
+  color: #aaa;
 }
 
-.buttons{
-display:flex;
-gap:12px;
-justify-content:center;
-margin-bottom:20px;
+.text {
+  margin-top: 18px;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #ddd;
 }
 
-.buttons a{
-flex:1;
-padding:12px 0;
-border-radius:14px;
-text-decoration:none;
-font-size:15px;
-color:#d4b26a;
-border:1px solid rgba(212,178,106,0.35);
-background:rgba(255,255,255,0.03);
-transition:0.3s;
+.buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 24px;
 }
 
-.buttons a:hover{
-background:rgba(212,178,106,0.15);
-transform:translateY(-2px);
+.buttons a {
+  flex: 1;
+  text-decoration: none;
+  padding: 12px 0;
+  border-radius: 14px;
+  font-size: 14px;
+  color: #d4af37;
+  border: 1px solid rgba(212,175,55,0.4);
+  background: rgba(255,255,255,0.02);
+  transition: 0.3s;
 }
 
-footer{
-font-size:12px;
-color:#777;
+.buttons a:hover {
+  background: rgba(212,175,55,0.15);
+  transform: translateY(-2px);
+}
+
+footer {
+  margin-top: 22px;
+  font-size: 12px;
+  color: #777;
 }
 </style>
 </head>
@@ -102,23 +103,25 @@ color:#777;
 
 <div class="card">
 
-<div class="avatar"></div>
+  <div class="avatar">
+    <img src="avatar.png" alt="sigma">
+  </div>
 
-<h1>sigma</h1>
-<div class="subtitle">مساحة صامتة</div>
+  <h1>sigma</h1>
+  <div class="subtitle">مساحة صامتة</div>
 
-<div class="text">
-<br>هنا موقعي الشخصي.
-أشارك ما لا يقال،
-وأترك للأثر أن يتكلم.
-</div>
+  <div class="text">
+    هنا موقعي الشخصي.<br>
+    لا أشرح.<br>
+    الأثر يكفي.
+  </div>
 
-<div class="buttons">
-<a href="https://www.instagram.com/sigma.n.s" target="_blank">Instagram</a>
-<a href="https://www.tiktok.com/@nasrerekat" target="_blank">TikTok</a>
-</div>
+  <div class="buttons">
+    <a href="https://www.instagram.com/sigma.n.s" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@nasrerekat" target="_blank">TikTok</a>
+  </div>
 
-<footer>© sigma — 2026</footer>
+  <footer>© sigma — 2026</footer>
 
 </div>
 
