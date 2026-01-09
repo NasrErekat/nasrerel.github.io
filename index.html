@@ -1,128 +1,125 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>sigma | مساحة صامتة</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sigma</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Cairo', sans-serif;
-    }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo', sans-serif;
+}
 
-    body {
-      min-height: 100vh;
-      background: radial-gradient(circle at top, #1a1a1a, #000);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #e6d3a3;
-    }
+body{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:
+radial-gradient(circle at top, #1c1c1c, #050505 70%);
+color:#e6e6e6;
+}
 
-    .card {
-      width: 90%;
-      max-width: 360px;
-      background: rgba(20,20,20,0.6);
-      backdrop-filter: blur(12px);
-      border-radius: 22px;
-      padding: 32px 24px;
-      text-align: center;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-      animation: breathe 6s ease-in-out infinite;
-    }
+.card{
+width:320px;
+padding:32px 24px;
+background:rgba(20,20,20,0.75);
+border-radius:22px;
+box-shadow:0 25px 60px rgba(0,0,0,0.6);
+text-align:center;
+backdrop-filter: blur(10px);
+}
 
-    @keyframes breathe {
-      0%,100% { transform: scale(1); }
-      50% { transform: scale(1.015); }
-    }
+.avatar{
+width:120px;
+height:120px;
+margin:0 auto 18px;
+border-radius:50%;
+background:url("avatar.png") center/cover no-repeat;
+box-shadow:
+0 0 0 6px rgba(255,255,255,0.03),
+0 0 25px rgba(200,170,90,0.25);
+}
 
-    .avatar {
-      width: 110px;
-      height: 110px;
-      margin: 0 auto 16px;
-      border-radius: 50%;
-      background: url("https://i.imgur.com/0y0y0y0.png") center/cover no-repeat;
-      box-shadow: 0 0 30px rgba(230,211,163,0.15);
-    }
+h1{
+font-size:26px;
+font-weight:600;
+color:#d4b26a;
+letter-spacing:1px;
+margin-bottom:8px;
+}
 
-    h1 {
-      font-weight: 600;
-      letter-spacing: 2px;
-      margin-bottom: 6px;
-    }
+.subtitle{
+font-size:14px;
+color:#9c9c9c;
+margin-bottom:18px;
+}
 
-    .subtitle {
-      font-size: 14px;
-      opacity: 0.8;
-      margin-bottom: 18px;
-    }
+.text{
+font-size:16px;
+line-height:1.9;
+color:#e0e0e0;
+margin-bottom:26px;
+}
 
-    .quote {
-      font-size: 15px;
-      line-height: 1.9;
-      color: #ddd;
-      margin-bottom: 26px;
-    }
+.buttons{
+display:flex;
+gap:12px;
+justify-content:center;
+margin-bottom:20px;
+}
 
-    .buttons {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-    }
+.buttons a{
+flex:1;
+padding:12px 0;
+border-radius:14px;
+text-decoration:none;
+font-size:15px;
+color:#d4b26a;
+border:1px solid rgba(212,178,106,0.35);
+background:rgba(255,255,255,0.03);
+transition:0.3s;
+}
 
-    .btn {
-      flex: 1;
-      padding: 12px;
-      border-radius: 14px;
-      background: rgba(255,255,255,0.05);
-      color: #e6d3a3;
-      text-decoration: none;
-      font-size: 14px;
-      transition: 0.3s ease;
-      border: 1px solid rgba(230,211,163,0.15);
-    }
+.buttons a:hover{
+background:rgba(212,178,106,0.15);
+transform:translateY(-2px);
+}
 
-    .btn:hover {
-      background: rgba(230,211,163,0.12);
-      transform: translateY(-3px);
-    }
-
-    footer {
-      margin-top: 24px;
-      font-size: 12px;
-      opacity: 0.4;
-    }
-  </style>
+footer{
+font-size:12px;
+color:#777;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="card">
-    <div class="avatar"></div>
+<div class="card">
 
-    <h1>sigma</h1>
-    <div class="subtitle">مساحة صامتة</div>
+<div class="avatar"></div>
 
-    <div class="quote">
-      لا أشرح.<br>
-      الأثر يكفي.
-    </div>
+<h1>sigma</h1>
+<div class="subtitle">مساحة صامتة</div>
 
-    <div class="buttons">
-      <a class="btn" href="https://www.tiktok.com/@nasrerekat" target="_blank">TikTok</a>
-      <a class="btn" href="https://www.instagram.com/sigma.n.s" target="_blank">Instagram</a>
-    </div>
+<div class="text">
+لا أشرح.<br>
+الأثر يكفي.
+</div>
 
-    <footer>
-      sigma — 2026 ©
-    </footer>
-  </div>
+<div class="buttons">
+<a href="https://www.instagram.com/sigma.n.s" target="_blank">Instagram</a>
+<a href="https://www.tiktok.com/@nasrerekat" target="_blank">TikTok</a>
+</div>
+
+<footer>© sigma — 2026</footer>
+
+</div>
 
 </body>
 </html>
