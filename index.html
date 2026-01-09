@@ -2,7 +2,10 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>موقعي الشخصي</title>
+  <title>نصر | مساحة هادئة</title>
+
+  <!-- Google Font (Arabic) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet"
@@ -12,42 +15,89 @@
     body {
       margin: 0;
       height: 100vh;
-      background: #0f0f0f;
+      background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: Arial, sans-serif;
+      font-family: 'Cairo', sans-serif;
       color: #e0e0e0;
+      overflow: hidden;
     }
 
     .card {
-      background: rgba(255,255,255,0.03);
-      padding: 30px;
-      border-radius: 20px;
+      background: rgba(255,255,255,0.04);
+      padding: 35px 30px;
+      border-radius: 22px;
       text-align: center;
       max-width: 420px;
       width: 90%;
-      box-shadow: 0 0 40px rgba(0,0,0,0.7);
+      box-shadow:
+        0 0 40px rgba(0,0,0,0.8),
+        0 0 60px rgba(243,199,122,0.05);
+      animation: fadeIn 1.4s ease forwards;
+      backdrop-filter: blur(6px);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* صورة شخصية (اختياري) */
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      background: linear-gradient(135deg, #f3c77a, #b8945a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #111;
+      font-size: 32px;
+      font-weight: 600;
+      box-shadow: 0 0 25px rgba(243,199,122,0.35);
     }
 
     h1 {
-      margin: 0;
+      margin: 10px 0 8px;
       color: #f3c77a;
       letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      opacity: 0.75;
+      margin-bottom: 18px;
     }
 
     p {
-      margin: 18px 0;
-      line-height: 1.8;
-      opacity: 0.85;
+      margin: 0 0 22px;
+      line-height: 1.9;
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
     }
 
     .links a {
-      display: inline-block;
-      margin: 0 12px;
-      padding-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
       color: #f3c77a;
       text-decoration: none;
+      font-size: 15px;
       position: relative;
       transition: color 0.3s ease;
     }
@@ -55,8 +105,8 @@
     .links a::after {
       content: "";
       position: absolute;
+      bottom: -4px;
       left: 0;
-      bottom: 0;
       width: 0;
       height: 1px;
       background: #f3c77a;
@@ -72,7 +122,13 @@
     }
 
     .links i {
-      margin-right: 6px;
+      font-size: 16px;
+    }
+
+    footer {
+      margin-top: 22px;
+      font-size: 12px;
+      opacity: 0.4;
     }
   </style>
 </head>
@@ -80,11 +136,16 @@
 <body>
 
   <div class="card">
+    <!-- صورة رمزية (حرف أول من الاسم) -->
+    <div class="avatar">ن</div>
+
     <h1>مرحبًا، أنا نصر</h1>
+    <div class="subtitle">مساحة هادئة</div>
 
     <p>
       هنا موقعي الشخصي.<br>
-      مساحة هادئة تعكس أفكاري واهتماماتي.
+      أشارك ما لا يُقال كثيرًا،  
+      وأترك للأثر أن يتكلم.
     </p>
 
     <div class="links">
@@ -96,6 +157,10 @@
         <i class="fab fa-tiktok"></i>TikTok
       </a>
     </div>
+
+    <footer>
+      © 2026
+    </footer>
   </div>
 
 </body>
