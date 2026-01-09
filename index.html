@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <title>نصر | مساحة هادئة</title>
@@ -7,122 +7,140 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
     body {
       margin: 0;
+      height: 100vh;
+      background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-family: 'Cairo', sans-serif;
-      background-color: #f4f1ec;
-      color: #2f2f2f;
+      color: #e0e0e0;
     }
 
-    .container {
-      max-width: 620px;
-      margin: auto;
-      padding: 70px 20px;
+    .card {
+      background: rgba(255,255,255,0.04);
+      padding: 38px 30px;
+      border-radius: 24px;
       text-align: center;
+      max-width: 420px;
+      width: 90%;
+      box-shadow: 0 0 45px rgba(0,0,0,0.8);
+      backdrop-filter: blur(6px);
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      margin: 0 auto 14px;
+      overflow: hidden;
+      box-shadow: 0 0 28px rgba(243,199,122,0.35);
+      animation: breathe 4s ease-in-out infinite;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes breathe {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.04); }
     }
 
     h1 {
-      font-size: 42px;
+      margin: 6px 0;
+      color: #f3c77a;
+      font-size: 22px;
       font-weight: 600;
-      margin-bottom: 6px;
+      letter-spacing: 1px;
     }
 
     .subtitle {
-      font-size: 16px;
-      font-weight: 300;
-      margin-bottom: 45px;
-      opacity: 0.85;
-    }
-
-    .description {
-      font-size: 17px;
-      line-height: 1.9;
-      margin-bottom: 45px;
-    }
-
-    .services {
-      font-size: 15px;
-      line-height: 2;
-      margin-bottom: 50px;
-      opacity: 0.9;
-    }
-
-    .contact-btn {
-      display: inline-block;
-      padding: 14px 34px;
-      border: 1px solid #2f2f2f;
-      color: #2f2f2f;
-      text-decoration: none;
-      border-radius: 40px;
-      font-size: 15px;
-      transition: all 0.3s ease;
-    }
-
-    .contact-btn:hover {
-      background-color: #2f2f2f;
-      color: #f4f1ec;
-    }
-
-    .social-links {
-      margin-top: 25px;
       font-size: 14px;
+      opacity: 0.7;
+      margin-bottom: 20px;
     }
 
-    .social-links a {
-      color: #2f2f2f;
-      text-decoration: none;
-      margin: 0 10px;
-      opacity: 0.75;
+    p {
+      font-size: 15px;
+      line-height: 1.9;
+      opacity: 0.9;
+      margin-bottom: 26px;
     }
 
-    .social-links a:hover {
-      opacity: 1;
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-top: 10px;
     }
 
-    .footer-text {
-      margin-top: 55px;
-      font-size: 13px;
-      opacity: 0.65;
-      line-height: 1.8;
+    .links a {
+      color: #f3c77a;
+      font-size: 20px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .links a:hover {
+      color: #ffd28a;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      margin-top: 26px;
+      font-size: 12px;
+      opacity: 0.4;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+
+  <div class="card">
+
+    <div class="avatar">
+      <img src="avatar.jpg" alt="Nasr">
+    </div>
 
     <h1>نصر</h1>
     <div class="subtitle">مساحة هادئة</div>
 
-    <div class="description">
-      أصنع محتوى بصري ونصي<br>
-      يعبّر عمّا لا يُقال<br>
-      ويترك الأثر يتكفّل بالباقي.
+    <p>
+      هنا موقعي الشخصي.<br>
+      أشارك ما لا يُقال،<br>
+      وأترك للأثر أن يتكلم.
+    </p>
+
+    <!-- الحسابات -->
+    <div class="links">
+      <a href="https://www.instagram.com/sigma.n.s" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+      <a href="https://www.tiktok.com/@nasrerekat" target="_blank" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+      </a>
     </div>
 
-    <div class="services">
-      • عبارات قصيرة تحمل إحساسًا صادقًا<br>
-      • تصاميم هادئة للنشر على تيك توك وإنستغرام<br>
-      • محتوى POV وسينمائي يعكس الصمت والمشاعر
-    </div>
-
-    <!-- زر التواصل الرئيسي (إنستغرام) -->
-    <a class="contact-btn" href="https://www.instagram.com/sigma.n.s" target="_blank">
-      ✦ تواصل معي
-    </a>
-
-    <!-- روابط اجتماعية -->
-    <div class="social-links">
-      <a href="https://www.tiktok.com/@nasrerekat?_r=1&_t=ZS-92vXVB3lAkT" target="_blank">TikTok</a> |
-      <a href="https://www.instagram.com/sigma.n.s?igsh=eGVnYjlubHNyMDY0" target="_blank">Instagram</a>
-    </div>
-
-    <div class="footer-text">
-      كل شيء هنا كُتب بهدوء…<br>
-      لمن يشعر أكثر مما يقول.
-    </div>
+    <footer>
+      © 2026
+    </footer>
 
   </div>
+
 </body>
 </html>
