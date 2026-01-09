@@ -3,12 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>the Sigma | مساحة هادئة</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
+*{
+  box-sizing:border-box;
+}
+
 body{
   margin:0;
   min-height:100vh;
@@ -20,6 +25,7 @@ body{
   color:#e0e0e0;
 }
 
+/* دخول ناعم */
 @keyframes fade{
   from{opacity:0;transform:translateY(18px)}
   to{opacity:1;transform:translateY(0)}
@@ -29,69 +35,86 @@ body{
   background:rgba(255,255,255,0.045);
   padding:32px 26px;
   border-radius:22px;
-  width:90%;
-  max-width:340px;
+  width:92%;
+  max-width:360px;
   text-align:center;
   box-shadow:0 0 45px rgba(0,0,0,0.85);
-  backdrop-filter:blur(7px);
+  backdrop-filter:blur(8px);
   animation:fade 1.2s ease;
 }
 
+/* صورة */
 .avatar{
-  width:90px;height:90px;border-radius:50%;
+  width:92px;
+  height:92px;
+  border-radius:50%;
   margin:0 auto 14px;
   overflow:hidden;
   box-shadow:0 0 26px rgba(243,199,122,.35);
 }
 
-.avatar img{width:100%;height:100%;object-fit:cover}
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
-h1{margin:6px 0 4px;font-size:19px;color:#f3c77a}
-.subtitle{font-size:12.5px;opacity:.65;margin-bottom:16px}
+h1{
+  margin:6px 0 4px;
+  font-size:19px;
+  color:#f3c77a;
+}
 
-p{font-size:13.5px;line-height:1.9;opacity:.9;margin-bottom:18px}
+.subtitle{
+  font-size:12.5px;
+  opacity:.65;
+  margin-bottom:16px;
+}
 
+p{
+  font-size:13.5px;
+  line-height:1.9;
+  opacity:.9;
+  margin-bottom:18px;
+}
+
+/* فيديو */
+.video-box{
+  margin:18px 0;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 0 30px rgba(0,0,0,.75);
+}
+
+.video-box video{
+  width:100%;
+  display:block;
+  filter:brightness(.92) contrast(1.05);
+}
+
+/* روابط */
 .links{
-  display:flex;justify-content:center;gap:26px;font-size:13px;
+  display:flex;
+  justify-content:center;
+  gap:28px;
+  font-size:15px;
 }
 
 .links a{
-  color:#f3c77a;text-decoration:none;display:flex;
-  align-items:center;gap:6px;opacity:.85
-}
-
-/* الأزرار */
-.actions{
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  margin:16px 0;
-}
-
-.actions button{
-  background:rgba(255,255,255,.06);
-  border:none;
   color:#f3c77a;
-  padding:8px 12px;
-  border-radius:12px;
-  font-size:12px;
-  cursor:pointer;
+  text-decoration:none;
+  opacity:.85;
 }
 
-.actions button:hover{background:rgba(255,255,255,.12)}
-
-/* الفيديو */
-.video-box{
-  margin-top:16px;
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 0 28px rgba(0,0,0,.75);
-  display:none;
+.links a:hover{
+  opacity:1;
 }
 
-.video-box video{width:100%;display:block}
-
-footer{margin-top:18px;font-size:10.5px;opacity:.35}
+footer{
+  margin-top:18px;
+  font-size:10.5px;
+  opacity:.35;
+}
 </style>
 </head>
 
@@ -103,7 +126,7 @@ footer{margin-top:18px;font-size:10.5px;opacity:.35}
     <img src="avatar.png" alt="the Sigma">
   </div>
 
-  <h1 id="name">the Sigma</h1>
+  <h1>the Sigma</h1>
   <div class="subtitle">مساحة هادئة</div>
 
   <p>
@@ -112,7 +135,19 @@ footer{margin-top:18px;font-size:10.5px;opacity:.35}
     وأترك للأثر أن يتكلم.
   </p>
 
-  <div class="links" id="links">
+  <div class="video-box">
+    <video id="sigmaVideo"
+           autoplay
+           loop
+           muted
+           playsinline
+           preload="auto">
+      <source src="video.mp4" type="video/mp4">
+      متصفحك لا يدعم الفيديو
+    </video>
+  </div>
+
+  <div class="links">
     <a href="https://www.instagram.com/sigma.n.s" target="_blank">
       <i class="fab fa-instagram"></i>
     </a>
@@ -121,31 +156,28 @@ footer{margin-top:18px;font-size:10.5px;opacity:.35}
     </a>
   </div>
 
-  <!-- الأزرار -->
-  <div class="actions">
-    <button onclick="toggleVideo()">🎬 فيديو</button>
-    <button onclick="alert('قريبًا معرض الصور')">🖼️ صور</button>
-    <button onclick="toggleLinks()">⚙️ إعدادات</button>
-  </div>
-
-  <div class="video-box" id="videoBox">
-    <video src="video.mp4" autoplay muted loop playsinline></video>
-  </div>
-
   <footer>© 2026</footer>
 
 </div>
 
 <script>
-function toggleVideo(){
-  const v = document.getElementById('videoBox');
-  v.style.display = v.style.display === 'none' ? 'block' : 'none';
+const video = document.getElementById("sigmaVideo");
+
+/* مستوى الصوت (خفيف جدًا) */
+video.volume = 0.08;
+
+/* أول تفاعل فقط */
+function enableSound() {
+  video.muted = false;
+  video.play();
+  document.removeEventListener("touchstart", enableSound);
+  document.removeEventListener("click", enableSound);
 }
 
-function toggleLinks(){
-  const l = document.getElementById('links');
-  l.style.display = l.style.display === 'none' ? 'flex' : 'none';
-}
+/* للجوال */
+document.addEventListener("touchstart", enableSound);
+/* للكمبيوتر */
+document.addEventListener("click", enableSound);
 </script>
 
 </body>
